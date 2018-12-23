@@ -19,16 +19,16 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-namespace jonlives\Seat\Supers;
+namespace jonlives\Seat\AssetAudit;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class EveapiServiceProvider
- * @package jonlives\Seat\Supers;
+ * @package jonlives\Seat\AssetAudit;
  */
-class YourPackageServiceProvider extends ServiceProvider
+class AssetAuditServiceProvider extends ServiceProvider
 {
 
     /**
