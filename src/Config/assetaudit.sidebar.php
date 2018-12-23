@@ -33,13 +33,15 @@ return [
                 'name' => 'Supercaps',
                 'icon' => 'fa-th-list',
                 'route' => 'supercaps',
+                'route_segment' => 'assetaudit',
                 'permission' => 'assetaudit.view'
             ],
             [
                 'name' => 'Faxes',
                 'icon' => 'fa-th-list',
                 'route' => 'faxes',
-                'permission' => 'assetaudit.view'
+                'route_segment' => 'assetaudit',
+                'permission' => 'assetaudit.view',
             ]
         ]
     ]
