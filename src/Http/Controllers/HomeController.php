@@ -38,7 +38,7 @@ class HomeController extends Controller
     public function getAssetListAndCount(string $user_id, array $asset_ids)
     {
         $assets[0] = $this->getCharacterAssetsByType($user_id, $asset_ids);
-        $assets[1] = count($assets[0])
+        $assets[1] = count($assets[0]);
         return $assets;
     }
 
