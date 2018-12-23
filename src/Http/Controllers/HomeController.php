@@ -39,7 +39,7 @@ class HomeController extends Controller
     {
         $assets = $this->getCharacterAssetsByType($user_id, $asset_ids);
 
-        return compat($assets, count($assets));
+        return compact($assets, count($assets));
     }
 
     /**
