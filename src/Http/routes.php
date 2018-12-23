@@ -23,7 +23,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 Route::group([
     'namespace'  => 'jonlives\Seat\AssetAudit\Http\Controllers',
     'prefix' => 'assetaudit',
-    'middleware' => 'bouncer:director'
+    'middleware' => 'bouncer:assetaudit.view'
 ], function () {
 
     // Your route definitions go here.
