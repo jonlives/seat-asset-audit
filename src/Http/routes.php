@@ -23,19 +23,19 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 Route::group([
     'namespace'  => 'jonlives\Seat\AssetAudit\Http\Controllers',
     'prefix' => 'assetaudit',
-    'middleware' => 'bouncer:assetaudit.view'
+    'middleware' => ['web','auth'],
 ], function () {
 
     // Your route definitions go here.
     Route::get('/supercaps', [
         'as'   => 'supercaps',
         'uses' => 'HomeController@getSuperCapList',
-        'middleware' => ['web', 'auth','bouncer:assetaudit.view']
+        'middleware' => 'bouncer:assetaudit.view'
     ]);
     // Your route definitions go here.
     Route::get('/faxes', [
         'as'   => 'faxes',
         'uses' => 'HomeController@getFaxList',
-        'middleware' => ['web', 'auth','bouncer:assetaudit.view']
+        'middleware' => 'bouncer:assetaudit.view'
     ]);
 });
