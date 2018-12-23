@@ -29,11 +29,13 @@ Route::group([
     // Your route definitions go here.
     Route::get('/supercaps', [
         'as'   => 'supercaps',
-        'uses' => 'HomeController@getSuperCapList'
+        'uses' => 'HomeController@getSuperCapList',
+        'middleware' => 'bouncer:assetaudit.view'
     ]);
     // Your route definitions go here.
     Route::get('/faxes', [
         'as'   => 'faxes',
-        'uses' => 'HomeController@getFaxList'
+        'uses' => 'HomeController@getFaxList',
+        'middleware' => 'bouncer:assetaudit.view'
     ]);
 });
