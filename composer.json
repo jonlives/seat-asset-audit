@@ -1,0 +1,38 @@
+{
+    "name": "jonlives/asset-audit",
+    "description": "Asset Auditing",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Thomas Le'Breau",
+            "email": "cschmitt@tankbusta.net"
+        },
+        {
+            "name": "Jon Cowie",
+            "email": "jonlives@gmail.com"
+        }
+    ],
+    "type": "seat-plugin",
+    "autoload": {
+        "psr-4": {
+            "jonlives\\Seat\\Supers\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1",
+        "laravel/framework": "5.5.*",
+        "eveseat/web": "3.0.*"
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "jonlives\\Seat\\AssetAudit\\AssetAuditServiceProvider"
+          ]
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    }
+}
