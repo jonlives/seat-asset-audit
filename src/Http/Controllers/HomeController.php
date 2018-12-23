@@ -42,6 +42,31 @@ class HomeController extends Controller
         return compat($assets, count($assets));
     }
 
+    /**
+     * @return \Illuminate\View\View
+     */
+    public function getFaxList()
+    {
+        $fax_asset_ids = array('Apostle' => '37604', 'Dagon' => '42242', 'Lif' => '37606', 'Loggerhead' => '45645', 'Minokawa' => '37605', 'Ninazu' => '37607', 'Venerable' => '42133');
+        $groups = $this->getAllGroups();
+        foreach($groups as $group)
+        {
+            foreach($group->users as $user)
+            {
+                $fax_list = $this->getAssetListAndCount($user->character_id, array_values($super_asset_ids));
+                $user->has_fax = $fax_list[1] > 0;
+                $fax_names = array();
+                foreach($fax_list[0] as $fax) {
+                    array_push($fax_names, $super['type']['typeName']);
+                }
+
+                $user->fax_names = implode(', ', $fax_names);
+            }
+        }
+
+        return view('assetaudit::faxes', compact('groups'));
+    }
+
         /**
      * @return \Illuminate\View\View
      */
@@ -54,14 +79,14 @@ class HomeController extends Controller
         {
             foreach($group->users as $user)
             {
-                $super_list = getAssetListAndCount($user->character_id, array_values($super_asset_ids));
+                $super_list = $this->getAssetListAndCount($user->character_id, array_values($super_asset_ids));
                 $user->has_super = $super_list[1] > 0;
                 $super_names = array();
                 foreach($super_list[0] as $super) {
                     array_push($super_names, $super['type']['typeName']);
                 }
 
-                $titan_list = getAssetListAndCount($user->character_id, array_values($titan_asset_ids));
+                $titan_list = $this->getAssetListAndCount($user->character_id, array_values($titan_asset_ids));
                 $user->has_titan = $titan_list[1] > 0;
                 $titan_names = array();
                 foreach($titan_list[0] as $titan) {
@@ -73,6 +98,6 @@ class HomeController extends Controller
             }
         }
 
-        return view('supers::supers', compact('groups'));
+        return view('assetaudit::supers', compact('groups'));
     }
 }

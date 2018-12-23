@@ -39,20 +39,13 @@
                     <div class="container-fluid">
                       <!-- user information -->
                       {!! img('character', $user->id, 64, ['class' => 'img-circle eve-icon small-icon']) !!}
-                        @if($user->has_super)
-                          <em class="text-success">{{ $user->name }} has the following supercarrier(s): </em>
-                          <em class="text-success">{{ $user->supers }}</em>
+                        @if($user->has_fax)
+                          <em class="text-success">{{ $user->name }} has the following fax(es): </em>
+                          <em class="text-success">{{ $user->faxes }}</em>
                         @else
-                          <em class="text-danger">{{ $user->name }} has no supercarrier(s)</em>
+                          <em class="text-danger">{{ $user->name }} has no fax(es)</em>
                         @endif
-                        <br>
-                        {!! img('character', $user->id, 64, ['class' => 'img-circle eve-icon small-icon']) !!}
-                        @if($user->has_titan)
-                          <em class="text-success">{{ $user->name }} has the following titan(s): </em>
-                          <em class="text-success">{{ $user->titans }}</em>
-                        @else
-                          <em class="text-danger">{{ $user->name }} has no titan(s)</em>
-                        @endif
+
                     </div>
 
                   </li>
