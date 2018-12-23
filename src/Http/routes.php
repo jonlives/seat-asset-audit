@@ -31,5 +31,9 @@ Route::group([
         'as'   => 'home',
         'uses' => 'HomeController@getSuperCapList'
     ]);
-
+    // Your route definitions go here.
+    Route::get('/faxes', [
+        'as'   => 'home',
+        'uses' => 'HomeController@getFaxList'
+    ]);
 });

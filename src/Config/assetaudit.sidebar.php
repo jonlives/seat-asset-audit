@@ -29,14 +29,14 @@ return [
         'route_segment' => 'assetaudit',
         'entries' => [
             [
-                'name' => 'Supercap Roll Call',
+                'name' => 'Supercaps',
                 'icon' => 'fa-th-list',
-                'route' => 'home'
+                'route' => 'supercaps'
             ],
             [
-                'name' => 'Fax Roll Call',
+                'name' => 'Faxes',
                 'icon' => 'fa-th-list',
-                'route' => 'home'
+                'route' => 'faxes'
             ]
         ]
     ]
