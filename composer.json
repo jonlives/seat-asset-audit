@@ -15,7 +15,7 @@
     "type": "seat-plugin",
     "autoload": {
         "psr-4": {
-            "jonlives\\Seat\\Supers\\": "src/"
+            "jonlives\\Seat\\AssetAudit\\": "src/"
         }
     },
     "minimum-stability": "stable",
