@@ -37,9 +37,9 @@ class HomeController extends Controller
 
     public function getAssetListAndCount(string $user_id, array $asset_ids)
     {
-        $assets = $this->getCharacterAssetsByType($user_id, $asset_ids);
-
-        return compact($assets, count($assets));
+        $assets[0] = $this->getCharacterAssetsByType($user_id, $asset_ids);
+        $assets[1] = count($assets[0])
+        return $assets;
     }
 
     /**
@@ -53,7 +53,7 @@ class HomeController extends Controller
         {
             foreach($group->users as $user)
             {
-                $fax_list = $this->getAssetListAndCount($user->character_id, array_values($super_asset_ids));
+                $fax_list = $this->getAssetListAndCount($user->character_id, array_values($fax_asset_ids));
                 $user->has_fax = $fax_list[1] > 0;
                 $fax_names = array();
                 foreach($fax_list[0] as $fax) {
