@@ -31,12 +31,14 @@ return [
             [
                 'name' => 'Supercaps',
                 'icon' => 'fa-th-list',
-                'route' => 'supercaps'
+                'route' => 'supercaps',
+                'permission' => 'assetaudit.view'
             ],
             [
                 'name' => 'Faxes',
                 'icon' => 'fa-th-list',
-                'route' => 'faxes'
+                'route' => 'faxes',
+                'permission' => 'assetaudit.view'
             ]
         ]
     ]
