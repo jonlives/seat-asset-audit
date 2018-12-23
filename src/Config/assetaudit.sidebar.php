@@ -26,6 +26,7 @@ return [
     'assetaudit' => [
         'name' => 'Asset Audit',
         'icon' => 'fa-user-secret',
+        'permission' => 'assetaudit.view',
         'route_segment' => 'assetaudit',
         'entries' => [
             [

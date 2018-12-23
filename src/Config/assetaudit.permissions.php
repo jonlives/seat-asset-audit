@@ -22,7 +22,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 return [
 
     'assetaudit' => [
-        'view',
-    ],
-
+        'view'
+    ]
 ];
