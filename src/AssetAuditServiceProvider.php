@@ -69,7 +69,7 @@ class AssetAuditServiceProvider extends ServiceProvider
      */
     public function add_views()
     {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'supers');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'assetaudit');
     }
 
     /**
@@ -77,7 +77,7 @@ class AssetAuditServiceProvider extends ServiceProvider
      */
     public function add_translations()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/lang', 'supers');
+        $this->loadTranslationsFrom(__DIR__ . '/lang', 'assetaudit');
     }
 
     /**
@@ -91,7 +91,7 @@ class AssetAuditServiceProvider extends ServiceProvider
         // Merge the config with anything in the main app
         // Web package configurations
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/assetaudit.config.php', 'supers.config');
+            __DIR__ . '/Config/assetaudit.config.php', 'assetaudit.config');
         $this->mergeConfigFrom(
             __DIR__ . '/Config/assetaudit.permissions.php', 'web.permissions');
         $this->mergeConfigFrom(
