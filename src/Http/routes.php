@@ -28,12 +28,12 @@ Route::group([
 
     // Your route definitions go here.
     Route::get('/supercaps', [
-        'as'   => 'home',
+        'as'   => 'supercaps',
         'uses' => 'HomeController@getSuperCapList'
     ]);
     // Your route definitions go here.
     Route::get('/faxes', [
-        'as'   => 'home',
+        'as'   => 'faxes',
         'uses' => 'HomeController@getFaxList'
     ]);
 });
