@@ -57,7 +57,7 @@ class HomeController extends Controller
                 $user->has_fax = $fax_list[1] > 0;
                 $fax_names = array();
                 foreach($fax_list[0] as $fax) {
-                    array_push($fax_names, $super['type']['typeName']);
+                    array_push($fax_names, $fax['type']['typeName']);
                 }
 
                 $user->fax_names = implode(', ', $fax_names);
