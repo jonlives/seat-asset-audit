@@ -30,12 +30,12 @@ Route::group([
     Route::get('/supercaps', [
         'as'   => 'supercaps',
         'uses' => 'HomeController@getSuperCapList',
-        'middleware' => 'bouncer:assetaudit.view'
+        'middleware' => ['web', 'auth','bouncer:assetaudit.view']
     ]);
     // Your route definitions go here.
     Route::get('/faxes', [
         'as'   => 'faxes',
         'uses' => 'HomeController@getFaxList',
-        'middleware' => 'bouncer:assetaudit.view'
+        'middleware' => ['web', 'auth','bouncer:assetaudit.view']
     ]);
 });
